@@ -21,7 +21,7 @@ git clone git@github.com:pdt-ahickmon/pd_support_bot.git
 cd pd_support_bot
 ```
 
-## 2️⃣ Set Up a Virtual Environment
+### 2️⃣ Set Up a Virtual Environment
 Before installing dependencies, create and activate a virtual environment:
 Mac/Linux:
 ```
@@ -45,18 +45,26 @@ python -m venv venv
 `pip install -r requirements.txt`
 
 If requirements.txt is missing, regenerate it with:
-`pip freeze > requirements.txt`
+```
+pip freeze > requirements.txt
+```
 
 ### 4️⃣ Set Up API Key
 Create a .env file in the root directory and add your OpenAI API Key:
-`echo "OPENAI_API_KEY=sk-your-api-key-here" > .env`
+```
+echo "OPENAI_API_KEY=sk-your-api-key-here" > .env
+```
 
 Alternatively, manually create .env and add:
-`OPENAI_API_KEY=sk-your-api-key-here`
+```
+OPENAI_API_KEY=sk-your-api-key-here
+```
 
 ### 5️⃣ Index Documentation
 Before running the bot, index the PagerDuty documentation:
-`python index_docs.py`
+```
+python index_docs.py
+```
 
 ---
 
@@ -64,10 +72,13 @@ Before running the bot, index the PagerDuty documentation:
 
 ### Run the Bot
 To start the bot, run:
-`python ask_support_bot.py`
+```
+python ask_support_bot.py
+```
 
 You will see:
-```🚀 Ask the PagerDuty AI Bot anything! (Type 'exit' to quit)
+```
+🚀 Ask the PagerDuty AI Bot anything! (Type 'exit' to quit)
 🟢 You:
 ```
 
@@ -85,12 +96,14 @@ venv\Scripts\activate      # Windows
 ### 2️⃣ API Key Issues
 If the bot fails due to an API key issue, double-check that:
 
-The .env file is properly created.
-Your API key is valid and active.
+1. The .env file is properly created.
+2. Your API key is valid and active.
 
 ### 3️⃣ SSH Key Issues
 If you cannot push to GitHub, ensure the correct SSH key is being used:
-`ssh -T git@github.com`
+```
+ssh -T git@github.com
+```
 
 ---
 
